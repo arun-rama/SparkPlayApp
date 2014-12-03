@@ -1,4 +1,4 @@
-This is a Play Spark Application
+Play Web Server wrapping Spark
 ============================
 
 scala: 2.10.4
@@ -7,11 +7,10 @@ Spark: 1.1 on CDH 5.2
 
 
 Modules
-There are two modules. There is the root module which is the play application that depends on a library project SparkQueryLibrary which is what is added to sparkContext.addJars and distributed to cluster. 
+There are two modules. The root module is the play application. It depends on a library module SparkQueryLibrary which is is added to sparkContext.addJars and distributed to cluster. 
 
 Dependencies
-The play app to use the exact version of Akka used by Spark 2.2.3 instead of 2.2.6.
-The spark jar is provided in the libary distributed to the cluster but is included as part of the play applicaiton build.
+The spark jar is set as "provided" in the libary jar that is distributed to the cluster. It is however included as part of the play applicaiton build.
 
 
 To Run
